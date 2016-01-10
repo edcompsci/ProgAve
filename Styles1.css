@@ -1,0 +1,100 @@
+
+
+/*for index page green link */
+.greenlink a {color:green;}
+
+/*used globally */
+
+midscreen {position:absolute;top:500px;left:500px;}
+scr-center {position:absolute; top:360; left:560;}
+rightscreen {position:absolute;top:5px;right:250px;}
+#HomeLink a:link {color: white; text-decoration: none;}
+
+titlefont {font-style: underline; color: purple; font-size: 14pt;}
+largeorange {font-size: 14pt; color: orange;}
+
+center-on-smallscreen {position:absolute;}
+
+center-on-phone {position:absolute;}
+
+center-on-tablet {position:absolute;}
+
+.autonewline {white-space: pre-line;} //puts newlines automatically without br tag
+/*end used globally  */
+
+/* for ad page */
+addmelinkpos {position: absolute; right: 200px;}
+AdPosition1 {position: absolute; top: 200px;}
+AdPosition2 {position: absolute; top: 200px; left: 300px;}
+AdPosition3 {position: absolute; top: 200px; left: 800px;}
+AdPosition1A {position: absolute; top: 400px;}
+friendslinks {position: absolute; top: 900px;}
+/* end for ad page */
+
+/*for Dictionary links */
+DictLink {position:absolute; right:100px;}
+/* end for dictionary links
+ *//____________________________________________________________________________________________________________________________
+
+/* Dictionary of Computer Terms page */
+#HomeLink a:link {color: white; text-decoration: none;}
+TablePos {position: absolute;top:50px;}
+#TableLink a:link {color:blue;}
+BoldItalic {font-style: bold,italic;}
+/* end Dictionary of Computer Terms page */
+
+
+/* for begun projects and finished projects pages */
+.whtbgrnd {background-color: white;}
+.most-recent-color	{color: yellow;background:#550010}
+/* end for begun projects and finished projects pages */
+
+/* start page styles */
+font-LinkIsLive {background-color: lightgreen; font-size: 13pt;font-family:helvetica}
+
+ProgAVE-posn {position: absolute;left:0px; top:0px;background-color: lightsteelblue;}
+text-posn {position:absolute; top:40px;left: 280px;background-color: lightsteelblue;}
+default-color {background-color: lightsteelblue;}
+ProgAVE-TextReplace {font-size: 32px; font-family: Arial;}
+/* end start page styles */
+
+/* start of animations */
+rotate {-webkit-transform: rotate(45deg);}
+
+
+
+
+<!DOCTYPE html><html><head><style>.animation1 {
+width:100px;
+height:100px;
+background:#00FFFF;
+
+-webkit-animation:anim1 5s;
+
+ /* Chrome, Safari, Opera */ 
+
+animation:anim1 5s;
+}
+
+
+
+
+@-webkit-keyframes anim1 
+{ /*Chrome, Safari, Opera*/
+	from {background:aqua;}
+	to {background:red;}
+}
+@keyframes anim1 { /*Standard */
+	from {background:aqua;}
+	to {background:red;}
+}
+
+/* end of animations */
+
+
+
+
+
+
+
+
