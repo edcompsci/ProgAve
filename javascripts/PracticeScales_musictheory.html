@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD Xhtml 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><title>Let a Random Number tell you what scale to play without looking</title><script language="Javascript">
+function getNumber(){
+         var value=Math.random()*13+2;
+         value=Math.round(value);
+         switch (value){
+				              
+					case 2:alert ("Play by memory: C#.Db Blues Scale");break;
+					case 3:alert ("Play by memory: D Blues Scale");break;
+					case 4:alert ("Play by memory: D#.Eb Blues Scale");break;
+					case 5:alert ("Play by memory: E Blues Scale");break;
+					case 6:alert ("Play by memory: F Blues Scale");break;
+					case 7:alert ("Play by memory: F#.Gb Blues Scale");break;
+					case 8:alert ("Play by memory: G Blues Scale");break;
+					case 9:alert ("Play by memory: G#.Ab Blues Scale");break;
+    					case 1: alert ("Play by memory: A Blues Scale"); break;
+                        		case 10: alert ("Play by memory: A#.Bb Blues Scale");break;
+                        		case 11: alert ("Play by memory: B Blues Scale");break;
+                        		case 12: alert ("Play by memory: C Blues Scale");break;
+                      			default:break;
+					}
+				
+
+}</script>
+
+</head>
+<body>
+<strong>
+<center>
+
+<form>
+<input type="button" value="Your Scale This time is " + streeng.substring(2,3) name="value" onClick="getNumber()" >
+
+
+<script language="Javascript">
+alert("Value is ",value);</script>
+</form>
+
+
+</body>
+</html>
+
+
