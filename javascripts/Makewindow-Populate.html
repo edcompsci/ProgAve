@@ -1,0 +1,35 @@
+<html>
+<head>
+<title>Writing to a Subwindow (child window)</title>
+<script type="text/javascript">
+var childWindow;
+function makeWindow(){
+	childwindow=window.open("","","status,height=200,width=300");
+	}
+function subWrite(){
+	if (childwindow.closed){
+		//open
+		makeWindow();
+		}
+//getfocus
+childwindow.focus();
+
+//what to populate with
+var content = "<html><head><title>New Hypertext Markup</title></head>";
+content += "<body bgcolor='coral'><h1>Do you want to use XML data on this page?</h1>";
+content += "</body></html>";
+
+//populate
+childwindow.document.write(content);
+childwindow.document.close(); // calls destructor which is already coded into the browser's Javascript
+}
+
+
+</script>
+</head>
+<body onload="makeWindow()">
+<form>
+<input type="button" value="Write Hypertext To Window" onclick="subWrite()">
+</form>
+</body>
+</html>

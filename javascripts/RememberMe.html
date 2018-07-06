@@ -1,0 +1,105 @@
+<script>
+
+
+function newCookie(name,value,daysCookieKept) {
+ var daysCookieKept = 10;   
+ if (daysCookieKept) {
+   var date = new Date();
+   date.setTime(date.getTime()+(daysCookieKept*24*60*60*1000));
+   var expires = "; expires="+date.toGMTString(); }
+   else var expires = "";
+   document.cookie = name+"="+value+expires+"; path=/"; }
+
+function readCookie(name) {
+   var nameSG = name + "=";
+   var nuller = '';
+  if (document.cookie.indexOf(nameSG) == -1)
+    return nuller;
+
+   var ca = document.cookie.split(';');
+  for(var i=0; i<ca.length; i++) {
+    var c = ca[i];
+    while (c.charAt(0)==' ') c = c.substring(1,c.length);
+  if (c.indexOf(nameSG) == 0) return c.substring(nameSG.length,c.length); }
+    return null; }
+
+function eraseCookie(name) {
+  newCookie(name,"",1); }
+
+function toMem(a) {
+    newCookie('theName', document.form.name.value);     // Cookie for Name
+    newCookie('theEmail', document.form.email.value);   // Cookie for Email Address
+}
+
+function delMem(a) {
+  eraseCookie('theName');   //Delete Name Cookie
+  eraseCookie('theEmail');	// Delete Email Address Cookie
+
+   document.form.name.value = '';   // add a line for every field
+   document.form.email.value = ''; }
+
+
+function remCookie() {
+document.form.name.value = readCookie("theName");
+document.form.email.value = readCookie("theEmail");
+}
+
+// Multiple onload function created by: Simon Willison
+// http://simon.incutio.com/archive/2004/05/26/addLoadEvent
+function addLoadEvent(func) {
+  var oldonload = window.onload;
+  if (typeof window.onload != 'function') {
+    window.onload = func;
+  } else {
+    window.onload = function() {
+      if (oldonload) {
+        oldonload();
+      }
+      func();
+    }
+  }
+}
+
+addLoadEvent(function() {
+  remCookie();
+});
+</script>
+
+<form name="form" action="" method="post" onsubmit="if (this.checker.checked) toMem(this)">
+ <table border="0" cellpadding="0" cellspacing="3" align="center" width="460">
+  <tr>
+    <td width="170" align="right">
+      Name:   
+    </td>
+    <td width="290">
+     <input size="30" name="name" id="name">
+    </td>
+
+  </tr>
+  <tr>
+    <td width="170" align="right">
+      E-mail:   
+    </td>
+    <td width="290">
+     <input size="30" name="email" id="email">
+    </td>
+  </tr>
+  <tr>
+    <td width="170" align="right">
+      Remember me?:   
+    </td>
+    <td width="290">
+     <input type="checkbox" id="checker" name="checker">
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2" align="center">
+      <input type="submit" value="Submit"> 
+      <input type="reset" value="Reset"> 
+      <input type="button" onclick="delMem(this)" value="Delete Information">
+    </td>
+  </tr>
+ </table>
+</form>
+
+

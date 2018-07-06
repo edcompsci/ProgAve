@@ -1,0 +1,37 @@
+<html>
+<head>
+<title>Append New Line</title>
+<style>
+midscreen {position:absolute;top:500px;left:500px;}
+rightscreen {position:absolute;top:5px;right:250px;}
+#HomeLink a:link {color: white; text-decoration: none;}
+</style>
+<script type="text/javascript">
+function AppendNewLine(form)
+{
+var thep = document.getElementById("myP");
+thep.appendChild(document.createElement("br"));
+thep.appendChild(document.createTextNode("Is this on a new line?"));
+
+}
+</script>
+</head>
+
+
+
+<body>
+<p id="myP">Append New Line</p>
+<midscreen><form><input type="button" value="Append" onclick="AppendNewLine(this.form)" /></form></midscreen>
+<div id="HomeLink"><rightscreen>
+<a href="http://www.progave.com">Home</a><br /></div>
+</rightscreen>
+</body>
+</html>
+
+
+
+
+
+
+
+
