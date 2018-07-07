@@ -2,7 +2,7 @@ function GoToPage(form)
 {
 var loop;
 
-for(loop=0; loop < 9; loop++)
+for(loop=0; loop < 10; loop++)
     {
     
       if(document.listofURLs.name[loop].selected== true)
