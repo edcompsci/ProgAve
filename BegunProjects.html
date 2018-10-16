@@ -2,10 +2,11 @@
 <head><title>Begun Projects</title>
 <meta name="description" content="An Ordered list of Begun projects, with links to each from the top of the page.  ">
 <meta http-equiv="content-type" content="text/html;charset=UTF-8">
-<script language="JavaScript" src="Scripts.js"></script>
+<script language="JavaScript" src="javascripts/Scripts.js"></script>
 <style type="text/css">
 .whtbgrnd {background-color: white;}
 .most-recent-color	{color: yellow;background:#550010}
+.scrapped-project {color: ghostwhite;}
 </style>
 
 
@@ -46,10 +47,13 @@
 <td><a href="#22">22 Windows Server 2012 Install and Config (for MTA)</a></td>
 <td><a href="#23">23 Introduction to Active Directory (70-410)</a></td>
 <td><a href="#24">24 Started watching Intro to Exchange Server 2010 Training</a></td>
-<td><a href="#25"><span class="most-recent-color"> (Currently Looking At)</span>25 Get a Hypervisor Running</a></td>
+<td><a href="#25">25 Get a Hypervisor Running</a></td>
 <td><a href="#26">26 Started working as an independent field repair professional</a></td>
 <td><a href="#27">27 Teaching myself Word Press</a></td>
 <td><a href="#28"><span class="most-recent-color"> (Currently Looking At)</span>28 Getting my NAS viewable to inside router and mounted to my desktop machine</a></td>
+<td><a href="#29"><span class="most-recent-color"> (Currently Looking At)</span>29 Creating Linux installation Repositories on my NAS</a></td>
+<td><a href="#30">30 Created a script to make configurations interactively to allow scanning on an Epson XP-430 on Linux Mint 19</a></td>
+<td><a href="#31">31 Created a javascript to create an mp3 playlist</a></td>
 
 </tr></table>http://edcompsci.github.io/ProgAve/BegunProjects.html
 <div><a style="background-color: lightblue;" href="#Book-Reading">Book Reading</a></div>
@@ -69,8 +73,8 @@
 2.
 <a id="2" />
 <a href="#start">back to top</a>
-<div style="font-family:verdana;"> (May 2012) Web Programming  (Not Paid)<br /><ol></li>
-<li>5-2-2012 started today working on a php mini-project on my laptop. </li>
+<div><span style="font-family:verdana;"> (May 2012) Web Programming  (Not Paid)<br /><ol></li>
+<li>5-2-2012 started today working on a php mini-project on my laptop. </span><span class="scrapped-project">scrapped project when laptop stopped working</span></li>
 
 </ol>
 </div>
@@ -111,21 +115,21 @@ These link to simple pages invoking Javascripts and DHTML. Nothing big and fancy
 <select size="1" name="name" onchange="GoToPage(this.form)">
 
     <option selected> </option>
-    <option value="Password-Transcript.html">Password Authentication</option>
-   <option value="marqueeAlloverpage.html">Marquee</option>
-    <option value="RememberMe.html">Remember user Name and Password</option>
-    <option value="Append-New-Line.html">Append a New Line</option>
+    <option value="javascripts/Password-Transcript.html">Password Authentication</option>
+   <option value="javascripts/marqueeAlloverpage.html">Marquee</option>
+    <option value="javascripts/RememberMe.html">Remember user Name and Password</option>
+    <option value="javascripts/Append-New-Line.html">Append a New Line</option>
     <option value="http://www.subsite2.freeservers.com/scroll.html">Scroll whole page right then left</option>
-    <option value="PreviewLinkOnMouseOver.html">Preview Link On MouseOver</option>
-    <option value="DateLowerRight.html">Date Lower Right Corner</option>
-    
-    <option value="http://www.progave.com">Not Made Yet</option>
-	<option value="http://www.progave.com">Not Made Yet</option>
- <option value="RelayoutHTMLpage.html">Relayout Page</option> 
-<option value="http://www.progave.com">Not Made Yet</option> 
+    <option value="javascripts/PreviewLinkOnMouseOver.html">Preview Link On MouseOver</option>
+    <option value="javascripts/DateLowerRight.html">Date Lower Right Corner</option>
+   <option value="javascripts/PracticeScales_musictheory.html">Method of memorizing music scales</option>
+<option value="javascripts/Know-Your-LinuxShell.html">Know Your Linux Shell</option>
 <option value="http://www.progave.com">Not Made Yet</option>
+	<option value="http://www.progave.com">Not Made Yet</option>
+ <option value="javascripts/RelayoutHTMLpage.html">Relayout Page</option> 
+
 <option value="http://192.168.1.101:8080/myfirstpod/web/main.jsp">My First Pod Programming attempt (JSP, Needs My Server On)</option>
-<option value="rotate-on-hover.html">CSS3 Rotate on Hover. Works on Chromium/Chrome</option>
+<option value="javascripts/rotate-on-hover.html">CSS3 Rotate on Hover. Works on Chromium/Chrome</option>
 <option value="http://www.progave.com">Not Made Yet</option>
 </select></form>
 <P><P><P><noscript>This listbox<P>may <P>not<P> work<P> depending <P>on your browser. </noscript><P>
@@ -228,11 +232,11 @@ dy> -->
 11.
 <a id="11" />
 <a href="#start">back to top</a>
- Started 04-18-2014:<br/>
+<span> Started 04-18-2014..</span><span class="scrapped-project">scrapped project due to laptop breaking and not replacing</span><br/>
 Upgraded laptop and desktop to newest Ubuntu LTS Trusty Tahr
  <br/><br/>
 <span> <ol>
-<li>Some probems with desktop upgrade. Downloading iso from laptop in case needed</li>
+<li>Some problems with desktop upgrade. Downloading iso from laptop in case needed</li>
 <li>Trying to resolve desktop issue by installing other DEs and/or commenting out some repos</li>
 <li>desktop: Had to re-import a gpg key and reinstall lxde and lxdm now upgraded ok.</li>
 <li>laptop: ...</li>
@@ -491,9 +495,7 @@ Getting a Hypervisor Running.
 <li> Looking at other options, I am either use XENServer, or install Linux's Kernel-Based Virtual Machine (KVM) on top of SELinux, or use CentOS, which I believe comes with it loaded already with working GUIs.</li>
 <li> while thinking about what next step to take, I went ahead to my desktop machine and installed VMWare Workstation Player 12.5 for Linux 64-bit so that I can create some actual .vmx and/or .vmdk VMs rather than qcow that I've done before.  I will then move these onto my centos machine and see if the run with qemu/kvm. I decided I'll use an iso of Server 2016 to create a vm with. Cancel that, I don't have a product key. Using Ubuntu Server 16.04.1 LTS..</li>
 <li>Decided everything will eventually work better if i get a NAS device, so Feb 9 2017 purchased a NAS device.</li>
-<li>Thought I had figured out my new QNAP NAS deivce in September 2017 but still not mounting.  Putting off getting the hypervisor running and creating a separate work entry for configuring new QNAP</li>
-<li>revisiting this project Aug 22, 2018:  After figuring out how to use my QNAP and mounting shared folders with NFS and CIFS I now was able to mount a Shared Folder for virtualmachines to my CentTOS machine and installed KVM</li>
-
+<li>Though I had figured out my new QNAP NAS deivce in September 2017 but still not mounting.  Putting off getting the hypervisor running and creating s separate work entry for configuring new QNAP</li>
 </ol>
 <div>
 
@@ -579,6 +581,8 @@ Getting my NAS viewable to inside router and mounted to my desktop machine
 <li>progress made 4-24-2018: able to mount as NFS using simple mount command after applying NFS permissions to shared folders in the NAS Web Admin page.  Have not moved on to CIFs yet.</li>
 <li>progress made on 4-26-2018: able to put fstab entries in that will automount the folders on initial login</li>
 <li>progress made on 5-7-2018: able to mount same shares using cifs both with mount command and with fstab</li>
+<li>progress made on 5-17-2018: able to relocate Apache web server www to a shared folder on the NAS</li>
+<li>
 
 </ol>
 <div>
@@ -589,10 +593,76 @@ Getting my NAS viewable to inside router and mounted to my desktop machine
 </span>
 </div>
 <div>
+29.
+<a id="29" />
+<a href="#start">back to top</a>
+- Started 7-12-2018:<br/>
+Creating Linux installation Repositories on my NAS
+<ol>
+<li>found a <span><a style="color: #21ABCD;" href="https://www.linux.com/learn/create-your-own-local-apt-repository-avoid-dependency-hell">Learning Source</a></span></li>
+<li></li>
+
+</ol>
+<div>
+
+<span></span>
+<span style="position:relative;left:10em;">
+
+</span>
+</div>
 
 
 </div>
 <div>
+
+
+
+<a id="30" />
+<a href="#start">back to top</a>
+- Started 08-11-2018:<br/>
+30. Created a script to make configurations interactively to allow scanning on an Epson XP-430 on Linux Mint 19
+<ol>
+<li>found a <span><a style="color: #21ABCD;" href="https://ubuntuforums.org/archive/index.php/t-1565846.html">Learning Source</a></span></li>
+
+
+</ol>
+<div>
+
+<span></span>
+<span style="position:relative;left:10em;">
+
+</span>
+</div>
+
+
+
+</div>
+
+<br />
+<br />
+
+<div>
+
+
+
+<a id="31" />
+<a href="#start">back to top</a>
+- Started 10-15-2018:<br/>
+31. Created a javascript to create an mp3 playlist
+<ol>
+<li> code being kept to myself but implements a browse button and an add button and a delete button</li>
+
+
+</ol>
+<div>
+
+<span></span>
+<span style="position:relative;left:10em;">
+
+</span>
+</div>
+
+
 
 </div>
 
@@ -614,48 +684,3 @@ Started Apr 17, 2014: MySQL Developer's Library (from 2010)<br />
 <li>Started sometime in May, 2014: Cisco 100-101 Official Certification Guide</li>
 </ul>
 </center>
-
-
-
- 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
